@@ -1,0 +1,19 @@
+LLM traffic query literature review:
+  searches:
+    arxiv:
+      - query: AND all="traffic classification"
+        desc: mainly networking traffic, but not vehicular traffic; 180+ results
+      - query: AND all="traffic classification"; AND all=LLM
+        desc: still networking traffic with LLM not vehicular traffic, 5 results
+      - query: AND all="traffic analysis"; AND all=LLM
+        desc: 2 about vehiclular traffic, 15 results
+      - query: AND all="traffic phase"; AND all=LLM
+        desc: traffic signal control with VLM, 1 result
+      - query: AND all="traffic state"; AND all=LLM
+        desc: all traffic related papers, 4 results
+      - query: AND all="traffic regime"; AND all=LLM
+        desc: nothing
+      - query: AND all="traffic prediction"; AND all=LLM
+        desc: all about networking, 10 results
+      - query: AND all="traffic flow"; AND all=LLM
+        desc: almost all about vehicular traffic, but across a wide variety of topics, 25 results

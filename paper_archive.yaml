@@ -1,0 +1,29 @@
+LLM traffic query / traffic analysis:
+- notable techniques:
+  - Retrieval Augmented Generation (RAG)
+  - Multi-Agent Systems
+  - Simulation-Based Reinforcement Learning
+  - Sim-to-Real Transfer
+  - LoRA Fine-Tuning
+  - tool integration
+- aux papers:
+  - title: "Data on the Move: Traffic-Oriented Data Trading Platform Powered by AI Agent with Common Sense"
+    keywords: data pricing, data trading, platform engineering
+- title: "V2X-LLM: Enhancing V2X Integration and Understanding in Connected Vehicle Corridors"
+  keywords: V2X, connected vehicles, vehicle corridors, traffic signal
+- title: "Open-TI: Open Traffic Intelligence with Augmented Language Model"
+  keywords: pipeline engineering
+- title: "Independent Mobility GPT (IDM-GPT): A Self-Supervised Multi-Agent Large Language Model Framework for Customized Traffic Mobility Analysis Using Machine Learning Models"
+  keywords: multi-agent, LLM, traffic mobility analysis, system engineering, prompt enhancement
+- title: "VLMLight: Safety-Critical Traffic Signal Control via Vision-Language Meta-Control and Dual-Branch Reasoning Architecture"
+  keywords: HIGHLY RELATED, traffic signal control, emergency vehicles, VLM, prompt engineering
+- title: "TrafficGPT: Viewing, processing and interacting with traffic foundation models"
+  keywords: HIGHLY CITED, PIONEERING, LLM pipeline, traffic agent
+- title: "Retrieval Augmented Generation-Enhanced Distributed LLM Agents for Generalizable Traffic Signal Control with Emergency Vehicles"
+  keywords: traffic signal control, RAG, simulation based tuning, simulation based reinforcement learning, single intersection modeling
+- title: "Prompt to Transfer: Sim-to-Real Transfer for Traffic Signal Control with Prompt Learning"
+  keywords: HIGHLY CITED, PIONEERING, Sim-to-Real, domain gap closure, traffic signal control, prompt learning
+- title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
+  keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA
+- title: "LLM-Assisted Light: Leveraging Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex Urban Environments"
+  keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
