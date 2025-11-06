@@ -1,14 +1,27 @@
 LLM traffic query / traffic analysis:
+- key tasks:
+  - traffic signal control
+  - traffic flow prediction
+  - traffic-aware route planning
 - notable techniques:
   - Retrieval Augmented Generation (RAG)
   - Multi-Agent Systems
   - Simulation-Based Reinforcement Learning
   - Sim-to-Real Transfer
   - LoRA Fine-Tuning
-  - tool integration
+  - regression layers
+  - external tool integration
+  - hot instruction tuning with cap layers
 - aux papers:
   - title: "Data on the Move: Traffic-Oriented Data Trading Platform Powered by AI Agent with Common Sense"
     keywords: data pricing, data trading, platform engineering
+  - title: "Physics of Automated-Driving Vehicular Traffic"
+    desc: a relatively new paper from BS Kerner on phase analysis for AV
+  - title: "ChatSUMO: LLM for Automating Traffic Scenario Generation in Simulation of Urban Mobility"
+    keywords: traffic scenario generation, SUMO, simulation engineering, LLM, data generation, interactive data editing
+- benchmarks:
+  - title: "USTBench: Benchmarking and Dissecting Spatiotemporal Reasoning of LLMs as Urban Agents"
+    desc: benchmark for urban traffic understanding using LLMs
 - title: "V2X-LLM: Enhancing V2X Integration and Understanding in Connected Vehicle Corridors"
   keywords: V2X, connected vehicles, vehicle corridors, traffic signal
 - title: "Open-TI: Open Traffic Intelligence with Augmented Language Model"
@@ -27,3 +40,13 @@ LLM traffic query / traffic analysis:
   keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA
 - title: "LLM-Assisted Light: Leveraging Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex Urban Environments"
   keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
+- title: "A Dual Large Language Models Architecture with Herald Guided Prompts for Parallel Fine Grained Traffic Signal Control"
+  keywords: traffic signal control, dual LLM, herald module
+# GPT- queried papers
+- title: "TransLLM: A Unified Multi-Task Foundation Framework for Urban Transportation via Learnable Prompting"
+  keywords: LLM pipeline, actor critic, Multi-Task
+  notes: similar engineering design with my prototype
+- title: "UrbanGPT: Spatio-Temporal Large Language Models"
+  keywords: HIGHLY CITED, PIONEERING, GREAT QUALITY, traffic flow prediction, spatio-temporal prediction, urban settings, traffic foundation model
+- title: "Large Language Models as Traffic Control Systems at Urban Intersections: A New Paradigm"
+  keywords: intersection modeling, pipeline engineering, vehicle behavior modeling

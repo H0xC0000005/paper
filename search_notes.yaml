@@ -10,10 +10,24 @@ LLM traffic query literature review:
       - query: AND all="traffic phase"; AND all=LLM
         desc: traffic signal control with VLM, 1 result
       - query: AND all="traffic state"; AND all=LLM
-        desc: all traffic related papers, 4 results
+        desc: all traffic related papers but not too relevant, 4 results
       - query: AND all="traffic regime"; AND all=LLM
         desc: nothing
       - query: AND all="traffic prediction"; AND all=LLM
         desc: all about networking, 10 results
       - query: AND all="traffic flow"; AND all=LLM
         desc: almost all about vehicular traffic, but across a wide variety of topics, 25 results
+      - query: AND all="synchronized flow"; AND all=LLM
+        desc: nothing
+      - query: AND all="synchronized flow" 
+        desc: mostly physics paper, 37 results
+      - query: AND all="traffic foundation model"
+        desc: trafficGPT, 1 result
+      - query: AND all="traffic signal control"; AND all=LLM
+        desc: highly relevant, 15 results
+    google_scholar:
+      - meta: 
+        date range: 2023-
+      - query: LLM traffic "wide moving jam" OR "synchronized flow" OR "free flow"
+        desc: about 15 relevant the rest are low quality, 201 results
+
