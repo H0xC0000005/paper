@@ -1,5 +1,5 @@
 LLM traffic query / traffic analysis:
-- key tasks:
+- key tasks related to LLM query prototype:
   - traffic signal control
   - traffic flow prediction
   - traffic-aware route planning
@@ -19,6 +19,8 @@ LLM traffic query / traffic analysis:
     desc: a relatively new paper from BS Kerner on phase analysis for AV
   - title: "ChatSUMO: LLM for Automating Traffic Scenario Generation in Simulation of Urban Mobility"
     keywords: traffic scenario generation, SUMO, simulation engineering, LLM, data generation, interactive data editing
+  - title: "Large Language Models and Their Applications in Roadway Safety and Mobility Enhancement: A Comprehensive Review"
+    desc: a relatively new survey paper on LLM for traffic safety and mobility
 - benchmarks:
   - title: "USTBench: Benchmarking and Dissecting Spatiotemporal Reasoning of LLMs as Urban Agents"
     desc: benchmark for urban traffic understanding using LLMs
@@ -42,6 +44,9 @@ LLM traffic query / traffic analysis:
   keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
 - title: "A Dual Large Language Models Architecture with Herald Guided Prompts for Parallel Fine Grained Traffic Signal Control"
   keywords: traffic signal control, dual LLM, herald module
+- title: "GraphTrafficGPT: Enhancing Traffic Management Through Graph-Based AI Agent Coordination"
+  keywords: multi-agent system, traffic management, query dispatching, mixture of experts
+  desc: a representative paper of generic traffic tasks query handling (they call it traffic management)
 # GPT- queried papers
 - title: "TransLLM: A Unified Multi-Task Foundation Framework for Urban Transportation via Learnable Prompting"
   keywords: LLM pipeline, actor critic, Multi-Task
@@ -50,3 +55,5 @@ LLM traffic query / traffic analysis:
   keywords: HIGHLY CITED, PIONEERING, GREAT QUALITY, traffic flow prediction, spatio-temporal prediction, urban settings, traffic foundation model
 - title: "Large Language Models as Traffic Control Systems at Urban Intersections: A New Paradigm"
   keywords: intersection modeling, pipeline engineering, vehicle behavior modeling
+- title: "LLM-based Human-Like Traffic Simulation for Self-Driving Tests (HDSim)"
+  keywords: traffic accidents simulation, human behavior modeling, human behavior factor, carla

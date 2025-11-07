@@ -25,9 +25,19 @@ LLM traffic query literature review:
         desc: trafficGPT, 1 result
       - query: AND all="traffic signal control"; AND all=LLM
         desc: highly relevant, 15 results
+      - query: AND all="traffic signal control" AND LLM phase
+        desc: 3 results
+      - query: AND all="mobility analysis" traffic LLM
+        desc: 2 results, 1 human mobility 1 lit review
+      - query: AND all="traffic management" LLM
+        desc: 28 results, almost all about vehicular traffic, but this topic is too broad
     google_scholar:
       - meta: 
         date range: 2023-
       - query: LLM traffic "wide moving jam" OR "synchronized flow" OR "free flow"
         desc: about 15 relevant the rest are low quality, 201 results
+    chatgpt:
+      - query: deep search
+        desc: around 7 high quality + 10+ others
+
 
