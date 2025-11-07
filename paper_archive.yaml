@@ -21,9 +21,13 @@ LLM traffic query / traffic analysis:
     keywords: traffic scenario generation, SUMO, simulation engineering, LLM, data generation, interactive data editing
   - title: "Large Language Models and Their Applications in Roadway Safety and Mobility Enhancement: A Comprehensive Review"
     desc: a relatively new survey paper on LLM for traffic safety and mobility
+  - title: "Edge AI-Enhanced Traffic Monitoring and Anomaly Detection Using Multimodal LLMs"
+    desc: interesting paper about edge device deployment of LLM and model distillation on traffic tasks
 - benchmarks:
   - title: "USTBench: Benchmarking and Dissecting Spatiotemporal Reasoning of LLMs as Urban Agents"
     desc: benchmark for urban traffic understanding using LLMs
+  - title: "CityBench: Evaluating the Capabilities of Large Language Models for Urban Tasks"
+    desc: a complete benchmark covering multiple urban tasks, all 7 microscopic tasks (excl TSC), incl perception, route planning, micro traffic, with full eval pipeline
 - title: "V2X-LLM: Enhancing V2X Integration and Understanding in Connected Vehicle Corridors"
   keywords: V2X, connected vehicles, vehicle corridors, traffic signal
 - title: "Open-TI: Open Traffic Intelligence with Augmented Language Model"

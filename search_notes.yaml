@@ -30,7 +30,9 @@ LLM traffic query literature review:
       - query: AND all="mobility analysis" traffic LLM
         desc: 2 results, 1 human mobility 1 lit review
       - query: AND all="traffic management" LLM
-        desc: 28 results, almost all about vehicular traffic, but this topic is too broad
+        desc: 28 results, almost all about vehicular traffic, but this topic is too broad. mostly about multi-agent systems and traffic task handling
+      - query: AND all="traffic control" LLM
+        desc: 13 results. all traffic task papers, but this term is borrowed across a wide variety of topics
     google_scholar:
       - meta: 
         date range: 2023-
