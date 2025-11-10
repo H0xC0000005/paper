@@ -23,6 +23,8 @@ LLM traffic query / traffic analysis:
     desc: a relatively new survey paper on LLM for traffic safety and mobility
   - title: "Edge AI-Enhanced Traffic Monitoring and Anomaly Detection Using Multimodal LLMs"
     desc: interesting paper about edge device deployment of LLM and model distillation on traffic tasks
+  - title: "Three-phase traffic theory and two-phase models with a fundamental diagram in the light of empirical stylized facts"
+    desc: a highly cited debate and summary on traffic phase theory
 - benchmarks:
   - title: "USTBench: Benchmarking and Dissecting Spatiotemporal Reasoning of LLMs as Urban Agents"
     desc: benchmark for urban traffic understanding using LLMs
@@ -44,6 +46,7 @@ LLM traffic query / traffic analysis:
   keywords: HIGHLY CITED, PIONEERING, Sim-to-Real, domain gap closure, traffic signal control, prompt learning
 - title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
   keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA
+  desc: xTP-LLM
 - title: "LLM-Assisted Light: Leveraging Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex Urban Environments"
   keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
 - title: "A Dual Large Language Models Architecture with Herald Guided Prompts for Parallel Fine Grained Traffic Signal Control"
@@ -61,3 +64,13 @@ LLM traffic query / traffic analysis:
   keywords: intersection modeling, pipeline engineering, vehicle behavior modeling
 - title: "LLM-based Human-Like Traffic Simulation for Self-Driving Tests (HDSim)"
   keywords: traffic accidents simulation, human behavior modeling, human behavior factor, carla
+
+# misc
+- title: "A Survey of Large Language Models for Traffic Forecasting"
+  notes: a good work-oriented paper summarizing many important works with intuitive desc and diagrams
+- title: "Where Would I Go Next? Large Language Models as Human Mobility Predictors"
+  keywords: HIGHLY CITED, PIONEERING, human mobility prediction, human behavior modeling, trajectory prediction
+  notes: this work is pretty elementary but its pipeline is instructive
+
+
+Traffic phase identification (traditional work):

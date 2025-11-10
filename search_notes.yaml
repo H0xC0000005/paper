@@ -41,5 +41,8 @@ LLM traffic query literature review:
     chatgpt:
       - query: deep search
         desc: around 7 high quality + 10+ others
+  notes:
+    - similar tasks: human behavior analysis (classification)
 
-
+Traffic phase identification (traditional work):
+  
