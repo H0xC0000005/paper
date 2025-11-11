@@ -23,8 +23,15 @@ LLM traffic query / traffic analysis:
     desc: a relatively new survey paper on LLM for traffic safety and mobility
   - title: "Edge AI-Enhanced Traffic Monitoring and Anomaly Detection Using Multimodal LLMs"
     desc: interesting paper about edge device deployment of LLM and model distillation on traffic tasks
+- traditional traffic phase analysis papers:
   - title: "Three-phase traffic theory and two-phase models with a fundamental diagram in the light of empirical stylized facts"
     desc: a highly cited debate and summary on traffic phase theory
+  - title: "Three-phase traffic theory and highway capacity"
+    desc: original paper by BS Kerner on three-phase traffic theory
+  - title: "Empirical evidence for a jamming transition in urban traffic"
+    desc: urban traffic phase work
+  - title: "Simulating synchronized traffic flow and wide moving jam based on the brake light rule"
+    desc: cellular automaton model for traffic phase simulation, focusing on synchronized flow simulation (brake light model)
 - benchmarks:
   - title: "USTBench: Benchmarking and Dissecting Spatiotemporal Reasoning of LLMs as Urban Agents"
     desc: benchmark for urban traffic understanding using LLMs
