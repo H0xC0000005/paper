@@ -78,6 +78,15 @@ LLM traffic query / traffic analysis:
 - title: "Where Would I Go Next? Large Language Models as Human Mobility Predictors"
   keywords: HIGHLY CITED, PIONEERING, human mobility prediction, human behavior modeling, trajectory prediction
   notes: this work is pretty elementary but its pipeline is instructive
+- title: "CoMAL: Collaborative Multi-Agent Large Language Models for Mixed-Autonomy Traffic"
+  desc: multi-agent AV platoon, elementary work, interesting in shockwave elimination / platooning speed negotiation
+- title: "Embracing Large Language Models in Traffic Flow Forecasting"
+  desc: LEAF, GNN + hypergraph + LLM for traffic flow prediction, spatial-temporal modeling is interesting
+- title: "An Automated Detection Framework for Multiple Highway Bottleneck Activations"
+  desc: traditional method of highway bottleneck identification (based on fundamental graph)
+- title: "Motorway Bottleneck Probability Estimation in Connected Vehicles Environment Using Speed Transition Matrices"
+  desc: bottleneck identification using speed transition matrices, and matrix analysis, fuzzy transition analysis, density analysis
+
 
 
 Traffic phase identification (traditional work):
