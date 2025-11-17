@@ -43,8 +43,8 @@ LLM traffic query / traffic analysis:
 - title: "Prompt to Transfer: Sim-to-Real Transfer for Traffic Signal Control with Prompt Learning"
   keywords: HIGHLY CITED, PIONEERING, Sim-to-Real, domain gap closure, traffic signal control, prompt learning
 - title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
-  keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA
-  desc: xTP-LLM
+  keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA, external factors, traffic flow prediction, explainability
+  desc: xTP-LLM; NO modeling of "events" in external factors, only environmental factors (weather, holiday, etc)
 - title: "LLM-Assisted Light: Leveraging Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex Urban Environments"
   keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
 - title: "A Dual Large Language Models Architecture with Herald Guided Prompts for Parallel Fine Grained Traffic Signal Control"
@@ -94,6 +94,22 @@ Traffic phase identification (traditional work):
 - title: "Methodology for the Identification of Shock Wave Type and Speed in a Traffic Stream Using Connected Vehicle Data"
   desc: shockwave identification, introduced 6 types of shockwaves, interesting writing with CCTV images and fundamental diagrams
 
+LLm with external factors:
+- title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
+  desc: xTP-LLM; NO modeling of "events" in external factors, only environmental factors (weather, holiday, etc)
+- title: "TraffiCoT-R: A framework for advanced spatio-temporal reasoning in large language models"
+  desc: propose spatial-temporal feature importance rotation (ST-FIR) to select feature importance with small LLM outside the box
+- title: "spatial-temporal large language model for traffic prediction"
+  desc: ST-LLM. use feature embedding layer + partly frozen attention LLM (hot MHA of final layers) + embedding feature alignment
+
 non-paper material:
 - title: "Massive traffic experiment pits machine learning against 'phantom' jams"
   desc: non-paper post from UCB, similar work in eliminating phantom jams by few AI vehicles
+
+other techniques:
+- title: "Chain of Draft: Thinking Faster by Writing Less"
+  desc: CoD paper, HIGHLY CITED, prompt engineering, act like "distilled knowledge version of CoT". limitations, not capable of zero-shot/ must provide hand-written drafts
+- title: "Harnessing LLMs for Cross-City OD Flow Prediction"
+  desc: LLM-COD, where COD is cross-city original-destination, cross-city OD matrix generation
+- title: "LC-LLM: Explainable Lane-Change Intention and Trajectory Predictions with Large Language Models"
+  desc: lane change prediction by LLM and LoRA, treat lane changing as classification, intention + trajectory prediction, using highD dataset
