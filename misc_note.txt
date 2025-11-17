@@ -2,3 +2,4 @@ jam dissolution: "slower is faster". jam can be reduced if entering traffic is m
 jam dissolution: on-ramp meters control to reduce main road traffic jam
 LoRA is very widely used in LLM fine-tuning
 most work focus on embedding external factors explicitly into prompt. one of S-lab plays with embedding layer; point is translating domain knowledge into natural language for LLM understanding
+traffic flow analysis can be not data-driven; analytic approach vs. data driven approach, this point should be important for LLM design
