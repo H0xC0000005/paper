@@ -42,6 +42,7 @@ LLM traffic query / traffic analysis:
   keywords: traffic signal control, RAG, simulation based tuning, simulation based reinforcement learning, single intersection modeling
 - title: "Prompt to Transfer: Sim-to-Real Transfer for Traffic Signal Control with Prompt Learning"
   keywords: HIGHLY CITED, PIONEERING, Sim-to-Real, domain gap closure, traffic signal control, prompt learning
+  desc: PromptGAT; modeled a few environmental factors in intersection; address sim-to-real gap
 - title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
   keywords: HIGHLY CITED, IRREGULAR, PIONEERING, LoRA, external factors, traffic flow prediction, explainability
   desc: xTP-LLM; NO modeling of "events" in external factors, only environmental factors (weather, holiday, etc)
@@ -59,7 +60,7 @@ LLM traffic query / traffic analysis:
 - title: "UrbanGPT: Spatio-Temporal Large Language Models"
   keywords: HIGHLY CITED, PIONEERING, GREAT QUALITY, traffic flow prediction, spatio-temporal prediction, urban settings, traffic foundation model
 - title: "Large Language Models as Traffic Control Systems at Urban Intersections: A New Paradigm"
-  keywords: intersection modeling, pipeline engineering, vehicle behavior modeling
+  keywords: intersection modeling, pipeline engineering, vehicle behavior modeling, jam clearance, single intersection
 - title: "LLM-based Human-Like Traffic Simulation for Self-Driving Tests (HDSim)"
   keywords: traffic accidents simulation, human behavior modeling, human behavior factor, carla
 
@@ -107,10 +108,20 @@ LLm with external factors:
   desc: propose spatial-temporal feature importance rotation (ST-FIR) to select feature importance with small LLM outside the box
 - title: "spatial-temporal large language model for traffic prediction"
   desc: ST-LLM. use feature embedding layer + partly frozen attention LLM (hot MHA of final layers) + embedding feature alignment
+- title: "ST-LLM+: Graph Enhanced Spatio-Temporal Large Language Models for Traffic Prediction"
+  desc: subsequent work of ST-LLM, add PFGA (partially frozen graph attention) to address spatial correlation, the rest structure are highly similar to ST-LLM
 
 non-paper material:
 - title: "Massive traffic experiment pits machine learning against 'phantom' jams"
   desc: non-paper post from UCB, similar work in eliminating phantom jams by few AI vehicles
+- website: "https://traffic-signal-control.github.io/"
+  desc: a website collecting many RF based TSC papers, and open datasets
+
+Traffic Signal Control (TSC):
+- title: "Large Language Models as Traffic Signal Control Agents: Capacity and Opportunity"
+  desc: early but full work for TSC, they even deploy in real life; data filtering with GPT4 + LoRA fine-tuning + critic-guided policy refinement
+- title: "PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network"
+  desc: traditional method, pressure definition & reward function, RL-learning on arterial string of signals; signal wave observation
 
 other techniques:
 - title: "Chain of Draft: Thinking Faster by Writing Less"
@@ -119,3 +130,11 @@ other techniques:
   desc: LLM-COD, where COD is cross-city original-destination, cross-city OD matrix generation
 - title: "LC-LLM: Explainable Lane-Change Intention and Trajectory Predictions with Large Language Models"
   desc: lane change prediction by LLM and LoRA, treat lane changing as classification, intention + trajectory prediction, using highD dataset
+- title: "Automating Traffic Model Enhancement with AI Research Agent"
+  desc: LLM agent, traditional idea generator (with RAG) + code generator + evaluator + analyzer structure, it works in traffic theory improvement
+- title: "LoRA: Low-Rank Adaptation of Large Language Models"
+  desc: LoRA paper, put here because it is a significant hot-tuning technique for almost all fine-tuning traffic LLM papers
+- title: "TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment"
+  desc: paper from same SLab group, addressing entanglement problem of time series and natural language prompt; inject language prompt to time series via dual encoding and attention, with feature alignment
+- title: "Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era"
+  desc: a good survey, revealing different schemes of modal combination; fusion vs alignment (alignment is better); numeric/statistical/contextual prompt work

@@ -3,3 +3,20 @@ jam dissolution: on-ramp meters control to reduce main road traffic jam
 LoRA is very widely used in LLM fine-tuning
 most work focus on embedding external factors explicitly into prompt. one of S-lab plays with embedding layer; point is translating domain knowledge into natural language for LLM understanding
 traffic flow analysis can be not data-driven; analytic approach vs. data driven approach, this point should be important for LLM design
+
+use VLM to predict event size and its impact on traffic 
+
+TSC can also work on single intersection while be aware of queue impact. long queues can cause subsequent traffic jams in corresponding segments, evolving into "jam clusters";
+if some directions in a single intersection may be overloaded or jammed upstream, signal control scheme may differ and can better resolve such situations
+
+effect of yellow light in TSC? how we model it? I haven't seen much about explicit modeling
+
+by controling traffic light intentionally, traffic distribution may change to a new one where the total delay time is benefited! this technique may be useful in overloaded intersections.
+
+what if same agents in TSC coordinate in connected intersections? what if they cannot communicate but can see surrounding data? 
+pressure are good ways in traditional RL TSC literature, what if we apply it to multiple intersections, or even integrate OD graph to define pressure and coordinate multiple intersections?
+
+irregular TSC phases in heavy traffic would help? e.g. 1-2 straight+turn > 1-2 straight + 2-1 straight ...
+
+what if we integrate OD graph analysis with microscopic traffic phase analysis with LLM? LLM may be aware of external factors encoded by OD and sudden events in explainable manners
+this may be useful in generating jam warnings and predict travel time in advance
