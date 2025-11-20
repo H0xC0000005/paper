@@ -9,7 +9,7 @@ use VLM to predict event size and its impact on traffic
 TSC can also work on single intersection while be aware of queue impact. long queues can cause subsequent traffic jams in corresponding segments, evolving into "jam clusters";
 if some directions in a single intersection may be overloaded or jammed upstream, signal control scheme may differ and can better resolve such situations
 
-effect of yellow light in TSC? how we model it? I haven't seen much about explicit modeling
+effect of yellow light in TSC? how we model it? I haven't seen much about explicit modeling; phases usually don't consider yellow lights
 
 by controling traffic light intentionally, traffic distribution may change to a new one where the total delay time is benefited! this technique may be useful in overloaded intersections.
 
@@ -20,3 +20,14 @@ irregular TSC phases in heavy traffic would help? e.g. 1-2 straight+turn > 1-2 s
 
 what if we integrate OD graph analysis with microscopic traffic phase analysis with LLM? LLM may be aware of external factors encoded by OD and sudden events in explainable manners
 this may be useful in generating jam warnings and predict travel time in advance
+
+LLMs are used to improve traffic model quality. some works construct automatic pipelines to evolve and evaluate traffic model, adding aux terms. what if we apply this in TSC criteria, e.g. utilize beyond traditional criteria such as queue length and pressure?
+
+how can LLM help to develop schemes in irregular intersections? or irregular combination of regular intersections?
+
+mutli-agent LLM on intersection network, or LLM aware of multi-agent control of an intersection network?
+
+RL + LLM in TSC; RL in charge of expert advice, LLM in charge of coordination & semantic comparison; this can be applied to multi-intersection setting. 
+in other words, LLM is a "fixing cap"
+
+rat running modeling?

@@ -48,6 +48,7 @@ LLM traffic query / traffic analysis:
   desc: xTP-LLM; NO modeling of "events" in external factors, only environmental factors (weather, holiday, etc)
 - title: "LLM-Assisted Light: Leveraging Large Language Model Capabilities for Human-Mimetic Traffic Signal Control in Complex Urban Environments"
   keywords: HIGHLY CITED, traffic signal control, urban environment, tool attachment, special scenarios
+  desc: LA-Light, with prompt engineering techniques; model OOD scenarios, incl emergency vehicles, accident blockout, lack of sensor data
 - title: "A Dual Large Language Models Architecture with Herald Guided Prompts for Parallel Fine Grained Traffic Signal Control"
   keywords: traffic signal control, dual LLM, herald module
 - title: "GraphTrafficGPT: Enhancing Traffic Management Through Graph-Based AI Agent Coordination"
@@ -122,6 +123,20 @@ Traffic Signal Control (TSC):
   desc: early but full work for TSC, they even deploy in real life; data filtering with GPT4 + LoRA fine-tuning + critic-guided policy refinement
 - title: "PressLight: Learning Max Pressure Control to Coordinate Traffic Signals in Arterial Network"
   desc: traditional method, pressure definition & reward function, RL-learning on arterial string of signals; signal wave observation
+- title: "illmtsc: Integration reinforcement learning and large language model for traffic signal control policy improvement"
+  desc: iLLM-TSC, use RL as backbone and LLM as evaluator and final decider; cover long corner cases and imperfect communication
+- title: "Scalable reinforcement learning framework for traffic signal control under communication delays"
+  desc: SARL-TSC, RL based on manual state variables + scene context encoder, deep RL network, unobserved scene prediction
+- title: "CoLLMLight: Cooperative Large Language Model Agents for Network-Wide Traffic Signal Control"
+  desc: data-driven multi-agent LLM for local intersection network, working on Jinan, Hangzhou, and NYC data; with cityflow sim
+
+Traffic flow prediction:
+- title: "Tpllm: A traffic prediction framework based on pretrained large language models"
+  desc: TPLLM, fine-tuned GPT2, CNN for temporal patterns, GCN for spatial patterns, fusion by addition, LoRA + L1 loss
+
+Event modeling, mobility prediction: 
+- title: "Exploring large language models for human mobility prediction under public events"
+  desc: elementary work with GPT-4 few-shot learning on NY Barklay center taxi pickup/dropoff prediction, leveraging prompt engineering techniques
 
 other techniques:
 - title: "Chain of Draft: Thinking Faster by Writing Less"
