@@ -3,6 +3,7 @@ LLM traffic query / traffic analysis:
   - traffic signal control
   - traffic flow prediction
   - traffic-aware route planning
+  - OD analysis
 - notable techniques:
   - Retrieval Augmented Generation (RAG)
   - Multi-Agent Systems
