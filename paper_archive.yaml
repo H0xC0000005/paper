@@ -130,6 +130,8 @@ Traffic Signal Control (TSC):
   desc: SARL-TSC, RL based on manual state variables + scene context encoder, deep RL network, unobserved scene prediction
 - title: "CoLLMLight: Cooperative Large Language Model Agents for Network-Wide Traffic Signal Control"
   desc: data-driven multi-agent LLM for local intersection network, working on Jinan, Hangzhou, and NYC data; with cityflow sim
+- title: 'State-of-art review of traffic signal control methods: challenges and opportunities'
+  desc: a review focusing on traditional methods of TSC, span 2015-2019
 
 Traffic flow prediction:
 - title: "Tpllm: A traffic prediction framework based on pretrained large language models"
@@ -154,3 +156,7 @@ other techniques:
   desc: paper from same SLab group, addressing entanglement problem of time series and natural language prompt; inject language prompt to time series via dual encoding and attention, with feature alignment
 - title: "Towards Cross-Modality Modeling for Time Series Analytics: A Survey in the LLM Era"
   desc: a good survey, revealing different schemes of modal combination; fusion vs alignment (alignment is better); numeric/statistical/contextual prompt work
+- title: "large language model powered digital traffic engineers the framework and case studies"
+  desc: elementary work of traffic theory-aware agent as traffic engineer; few-shot tuning of LLM
+- title: "Leveraging Large Language Models (LLMs) for Traffic Management at Urban Intersections: The Case of Mixed Traffic Scenarios"
+  desc: a strange paper, modeling microscopic vehicle behavior at intersection with LLM, not TSC on intersection

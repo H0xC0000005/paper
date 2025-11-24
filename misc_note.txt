@@ -31,3 +31,14 @@ RL + LLM in TSC; RL in charge of expert advice, LLM in charge of coordination & 
 in other words, LLM is a "fixing cap"
 
 rat running modeling?
+
+in an intersection network, if there's wide deployment of AVs and TSC can communicate with them via V2X, can better signal plans be formed?
+
+------------------------------------------------
+RQ proposal
+------------------------------------------------
+1. multi-agent LLM coordinated TSC with MoE architecture (RL agent, jam prediction LLM agent, communication agent[can be traditional] ), minimizing jam lingering time & congested segment number
+1.1. in intersection network with heavy traffic, emergency vehicles should be prioritized but if heuristically set signal for them there may be great efficiency loss
+can we do better in LLm coordination handling emergency vehicles?
+2. AV in highway stablzing traffic condition and reducing jams
+
