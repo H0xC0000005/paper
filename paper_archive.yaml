@@ -13,6 +13,10 @@ LLM traffic query / traffic analysis:
   - regression layers
   - external tool integration
   - hot instruction tuning with cap layers
+  - TSC:
+    - genetic algorithm (GA)
+    - min pressure disparity
+    - particle swarm optimization (PSO)
 - aux papers:
   - title: "Data on the Move: Traffic-Oriented Data Trading Platform Powered by AI Agent with Common Sense"
     keywords: data pricing, data trading, platform engineering

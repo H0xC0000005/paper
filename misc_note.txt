@@ -34,6 +34,9 @@ rat running modeling?
 
 in an intersection network, if there's wide deployment of AVs and TSC can communicate with them via V2X, can better signal plans be formed?
 
+instruct LLMs to perform rat running... and then use these "rat running experts" to model abnormal traffic flow of intersections...
+may be possible? something like adversarial learning?
+
 ------------------------------------------------
 RQ proposal
 ------------------------------------------------
