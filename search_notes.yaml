@@ -45,4 +45,9 @@ LLM traffic query literature review:
     - similar tasks: human behavior analysis (classification)
 
 Traffic phase identification (traditional work):
+
+Rat running:
+  arxiv:
+    - query: 'all="rat running" OR "rat-running" OR "rat-run" OR "rat runner"'
+      desc: only 1 result about wormhole, interesting
   

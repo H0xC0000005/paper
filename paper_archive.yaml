@@ -164,3 +164,19 @@ other techniques:
   desc: elementary work of traffic theory-aware agent as traffic engineer; few-shot tuning of LLM
 - title: "Leveraging Large Language Models (LLMs) for Traffic Management at Urban Intersections: The Case of Mixed Traffic Scenarios"
   desc: a strange paper, modeling microscopic vehicle behavior at intersection with LLM, not TSC on intersection
+
+rat-run modeling:
+- title: "A Network Analysis Approach to Identifying Rat-Running Hotspots in Bogotá, Colombia"
+  desc: the first rat-run paper I found, elementary method based on Betweenness Centrality (BC comparison to a baseline time)
+- title: "Traffic jam by GPS: A systematic analysis of the negative social externalities of large-scale navigation technologies"
+  desc: not well-written summary of negative social externality (NSE) of different aspect from navigation, can act as starting point
+
+navigation:
+- title: "AnLLM-Powered Cooperative Framework for Large-Scale Multi-Vehicle Navigation"
+  desc: hierarchical reward LoRA fine-tuning (per-vehicle reward + global reward) for multi-vehicle navigation task; unclear work, not showing LLm IO modality and format
+
+OD analysis:
+- title: "Origin-destination prediction via knowledge-enhanced hybrid learning"
+  desc: a good and complete paper utilizing self-attention, local & global graphs, and external factors. good work in OD prediction
+
+
