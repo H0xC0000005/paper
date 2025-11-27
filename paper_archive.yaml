@@ -180,3 +180,17 @@ OD analysis:
   desc: a good and complete paper utilizing self-attention, local & global graphs, and external factors. good work in OD prediction
 
 
+Papers similar to my proposal:
+- title: "LLM-based feature generation from text for interpretable machine learning"
+  year: 2024/09
+  desc: corpus extraction, human designed feature engineering, more like summarization task
+- title: "LLM-Guided Reinforcement Learning for Interactive Environments"
+  year: 2025/04
+  desc: LLM goal proposal for RL agent, a tightly coupled version (with downstream task) of my idea\
+- title: "CrashSage: A Large Language Model-Centered Framework for Contextual and Interpretable Traffic Crash Analysis"
+  year: 2025/05
+  desc: finding crash explicit factors with few-shot prompting, similar to my idea, may refer its methodology of prompting
+- title: "Knowledge-Informed Automatic Feature Extraction via Collaborative Large Language Model Agents"
+  year: 2025/11
+  desc: a highly similar pipeline and task structure from my idea, they work on enhancing traditional ML tasks (classification/regression) and models with explicit features (forests, XGBoost)
+  
