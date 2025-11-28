@@ -181,6 +181,14 @@ OD analysis:
 
 
 Papers similar to my proposal:
+- notes:
+  - some similar work on "feature mining" (one-time or iterative discovery), my idea can be based on feature improvements/universal features/compact representation
+  - maybe I can show that single agents can work as well as mult-agent architectures? (evaluation module as fixed coded module without LLM). or maybe a fine-tuned LLM evaluator?
+  - peer works focus on "data centric tasks" while my idea can work on simulation or analycic tasks
+  - existing works do not provide causes of model performance! at least not explainable; this should be novelty in simulation/analycic tasks
+  - introducing non-linearity by LLM (maybe can be viewed as distillation of pre-trained knowledge in LLM)
+  - there are works using LLM-ML teaming. maybe training data of RL (e.g. gradients) can be utilized?
+  - works on classic models (e.g. rand forest) rely on prior of model structure... maybe RL application (reward signal learning) can have novelty?
 - title: "LLM-based feature generation from text for interpretable machine learning"
   year: 2024/09
   desc: corpus extraction, human designed feature engineering, more like summarization task
@@ -193,4 +201,28 @@ Papers similar to my proposal:
 - title: "Knowledge-Informed Automatic Feature Extraction via Collaborative Large Language Model Agents"
   year: 2025/11
   desc: a highly similar pipeline and task structure from my idea, they work on enhancing traditional ML tasks (classification/regression) and models with explicit features (forests, XGBoost)
+- title: "FELA: A Multi-Agent Evolutionary System for Feature Engineering of Industrial Event Log Data"
+  year: 2025/11
+  desc: first multi-agent feature extraction working on user log data (proposed by tencent); use traditional feedback loop (with a bit exploration-exploitation balance); their agent structure is large and doubted redundant
+- title: "LLM-FE: Automated Feature Engineering for Tabular Data with LLMs as Evolutionary Optimizers"
+  year: 2025/05
+  desc: monolithic LLm feature generation for classic classification/regression tasks (for tabular data)
+- title: "Large Language Models for Automated Data Science: Introducing CAAFE for Context-Aware Automated Feature Engineering"
+  year: 2023/09
+  desc: one of the starting point of LLM feature extraction. this paper already propose feedback LLM prompting loop
+- title: "Unsupervised Feature Transformation via In-context Generation, Generator-critic LLM Agents, and Duet-play Teaming"
+  year: 2025/04
+  desc: the first paper that I see about a similar literature "feature transformation"
+    single-shot pipeline (critique -> generation) exploring feature combinations, though can be iterative
+- title: "LLM-ML Teaming: Integrated Symbolic Decoding and Gradient Search for Valid and Stable Generative Feature Transformation"
+  year: 2025/06
+  desc: interesting paper working on feature transformation. they first distill a student LLM to produce probability with GPT-4 generated good quality data,
+    and do a joint probability (similar to attention) to select feature set
+- title: "Programmatic Representation Learning with Language Models"
+  year: 2025/09
+  desc: interesting paper, using code as feature representation (instead of tokens); evaluate beyond tabular data (image, position);
+    tightly coupled to prior of decision tree structure and training process
+
+
+
   
