@@ -189,6 +189,10 @@ Papers similar to my proposal:
   - introducing non-linearity by LLM (maybe can be viewed as distillation of pre-trained knowledge in LLM)
   - there are works using LLM-ML teaming. maybe training data of RL (e.g. gradients) can be utilized?
   - works on classic models (e.g. rand forest) rely on prior of model structure... maybe RL application (reward signal learning) can have novelty?
+  - maybe... we can let LLM watching the simulation (while let LLM specify what to observe) and do self-critique? (basic statistics can be provided)
+  - island memory is a genetic programming approach, good for encouraging exploration
+  - would MoE be applied in such cases, hoping to discover more fine-grained features/knowledges in different subdomains?
+  - dispatcher-free MoE-LLM (let each LLM analyze what is its advantage, propose what to do and only focus on the proposal)?
 - title: "LLM-based feature generation from text for interpretable machine learning"
   year: 2024/09
   desc: corpus extraction, human designed feature engineering, more like summarization task
@@ -222,7 +226,32 @@ Papers similar to my proposal:
   year: 2025/09
   desc: interesting paper, using code as feature representation (instead of tokens); evaluate beyond tabular data (image, position);
     tightly coupled to prior of decision tree structure and training process
-
-
-
+  # 20251201
+- title: "LLM-SR: Scientific Equation Discovery via Programming with Large Language Models"
+  year: 2024/05
+  desc: highly cited paper working on symbolic regression with LLM, focusing on scientific formula discovery;
+    hypothesis generation > data centric evaluation > island memory update and retrieval
+- title: "Mathematical discoveries from program search with large language models"
+  year: 2023/12
+  desc: very highly cited paper working on theory evolvement (cap set, admissible set, bin packing) while achieving breakthrough; nature article; 
+    use program database (island memory) to encourage exploration of new ideas
+- title: "Interpretable Machine Learning for Science with PySR and SymbolicRegression.jl"
+  year: 2023/05
+  desc: PySR paper, non LLM based; collected here because it is the boundary for SR and genetic algorithm; I should not go beyond this
+- title: "Multimodal LLM for Intelligent Transportation Systems"
+  year: 2024/12
+  desc: not a good paper and not working on automic feature extraction, but it works on multimodal data in traffic (maybe inspiring)
+- title: "Evaluating Large Language Models on Time Series Feature Understanding: A Comprehensive Taxonomy and Benchmark"
+  year: 2024/04
+  desc: a complete benchmark paper on LLM time series tasks. maybe useful for evaulation & experiment
+- title: "LLM-enhanced multi-causal event causality mining in financial texts"
+  year: 2025/11
+  desc: a very first paper applying causal relationship mining with LLM in finance. maybe I can use similar domain method in traffic etc.?
+- title: "No Black Boxes: Interpretable and Interactable Predictive Healthcare with Knowledge-Enhanced Agentic Causal Discovery"
+  year: 2025/05
+  desc: also a work of pure application, in medical domain; dig in a bit more about explainability
+- title: "Semantic Preprocessing for LLM-based Malware Analysis"
+  year: 2025/10
+  desc: interesting work on LLM malware analysis. extract programmatic features (which are the key in this field), 
+    not so relevant to my idea but it is an interesting inspiration
   
