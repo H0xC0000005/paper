@@ -107,7 +107,7 @@ Traffic phase identification (traditional work):
 - title: "Empirical evidence for a jamming transition in urban traffic"
   desc: interesting work figuring out correlation between different traffic jams in city, using Paris data
 
-LLm with external factors:
+LLm with external factors (mainly traffic flow prediction):
 - title: "Towards Explainable Traffic Flow Prediction with Large Language Models"
   desc: xTP-LLM; NO modeling of "events" in external factors, only environmental factors (weather, holiday, etc)
 - title: "TraffiCoT-R: A framework for advanced spatio-temporal reasoning in large language models"
@@ -116,6 +116,11 @@ LLm with external factors:
   desc: ST-LLM. use feature embedding layer + partly frozen attention LLM (hot MHA of final layers) + embedding feature alignment
 - title: "ST-LLM+: Graph Enhanced Spatio-Temporal Large Language Models for Traffic Prediction"
   desc: subsequent work of ST-LLM, add PFGA (partially frozen graph attention) to address spatial correlation, the rest structure are highly similar to ST-LLM
+- title: "GSF-LLM: Graph-Enhanced Spatio-Temporal Fusion-Based Large Language Model for Traffic Prediction"
+  year: 2025/09
+  desc: use similar spatial-temporal embedding as ST-LLM, partially frozen attention, use fusion to add everything together
+    performance about the same with ST-LLM, only marginal gain
+
 
 non-paper material:
 - title: "Massive traffic experiment pits machine learning against 'phantom' jams"
@@ -140,6 +145,7 @@ Traffic Signal Control (TSC):
 Traffic flow prediction:
 - title: "Tpllm: A traffic prediction framework based on pretrained large language models"
   desc: TPLLM, fine-tuned GPT2, CNN for temporal patterns, GCN for spatial patterns, fusion by addition, LoRA + L1 loss
+
 
 Event modeling, mobility prediction: 
 - title: "Exploring large language models for human mobility prediction under public events"
