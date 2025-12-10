@@ -171,11 +171,23 @@ other techniques:
 - title: "Leveraging Large Language Models (LLMs) for Traffic Management at Urban Intersections: The Case of Mixed Traffic Scenarios"
   desc: a strange paper, modeling microscopic vehicle behavior at intersection with LLM, not TSC on intersection
 
+just for interest:
+- title: ""
+- title: "Large Language Models and Games: A Survey and Roadmap"
+- title: ""
+
+
 rat-run modeling:
 - title: "A Network Analysis Approach to Identifying Rat-Running Hotspots in Bogotá, Colombia"
   desc: the first rat-run paper I found, elementary method based on Betweenness Centrality (BC comparison to a baseline time)
 - title: "Traffic jam by GPS: A systematic analysis of the negative social externalities of large-scale navigation technologies"
   desc: not well-written summary of negative social externality (NSE) of different aspect from navigation, can act as starting point
+- title: "Controlling Traffic Congestion in a Residential Area via GLOSA Development"
+  desc: a shallow work on directly mitigating rat-running; addressing nav app -> rat running issue
+- title: "Navigation services amplify concentration of traffic and emissions in our cities"
+  desc: good work, nav serv reduce route diversity; causing concentrated traffic demand; indirect rat running analysis. possibility to integrate OD analysis into play
+- title: "Impact of navigation apps on congestion and spread dynamics on a transportation network"
+  desc: correlation analysis between nav app usage portion and congested segments. 30-60% is sweet spot proportion
 
 navigation:
 - title: "AnLLM-Powered Cooperative Framework for Large-Scale Multi-Vehicle Navigation"
