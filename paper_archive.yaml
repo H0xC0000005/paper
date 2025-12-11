@@ -188,6 +188,18 @@ rat-run modeling:
   desc: good work, nav serv reduce route diversity; causing concentrated traffic demand; indirect rat running analysis. possibility to integrate OD analysis into play
 - title: "Impact of navigation apps on congestion and spread dynamics on a transportation network"
   desc: correlation analysis between nav app usage portion and congested segments. 30-60% is sweet spot proportion
+- url: "https://www.itsinternational.com/its5/feature/how-outsmart-rat-runners-use-data"
+  desc: a post, but with high quality, identify rat running route and discussing connected vehicle data
+- title: "Exploring expectations and lived experiences of Low Traffic Neighbourhoods in Birmingham, UK"
+  desc: a social science work on LTN, not directly related to CS aspect but as reference
+- url: "https://algorithmwatch.org/en/navigation-systems-small-towns/"
+  desc: yet another post elaborating nav app effect on introducing new bottleneck and public regulations to fight against it
+- title: "The impact of GPS-enabled shortest path routing on mobility: a game theoretic approach"
+  desc: good work modeling route choice with nav app; analyze user equilibrium (wardrop) based on travel time
+- title: "Navigation System-Based Routing Strategies in Traffic Flows on Networks"
+  desc: mathematical work on modeling route choice, and causal analysis that such choice can induce rat running
+- notes: 
+  - relationship between home delivery and rat running is notable
 
 navigation:
 - title: "AnLLM-Powered Cooperative Framework for Large-Scale Multi-Vehicle Navigation"
