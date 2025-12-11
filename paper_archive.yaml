@@ -198,6 +198,10 @@ rat-run modeling:
   desc: good work modeling route choice with nav app; analyze user equilibrium (wardrop) based on travel time
 - title: "Navigation System-Based Routing Strategies in Traffic Flows on Networks"
   desc: mathematical work on modeling route choice, and causal analysis that such choice can induce rat running
+- title: "Utility of Traffic Information in Dynamic Routing: Is Sharing Information Always Useful?"
+  desc: direct work finding proportion of dynamic routing hit a sweet spot in moderate proportion to reduce avg travel time; only use a 5x5 grid structure
+- title: "Identification of plausible low traffic neighbourhoods using open data"
+  desc: good work modeling low traffic neighbourhoods (LTN). through routes, travel preference on active ways are criteria; addressing rat running in the opposite way
 - notes: 
   - relationship between home delivery and rat running is notable
 
@@ -256,7 +260,6 @@ Papers similar to my proposal:
   year: 2025/09
   desc: interesting paper, using code as feature representation (instead of tokens); evaluate beyond tabular data (image, position);
     tightly coupled to prior of decision tree structure and training process
-  # 20251201
 - title: "LLM-SR: Scientific Equation Discovery via Programming with Large Language Models"
   year: 2024/05
   desc: highly cited paper working on symbolic regression with LLM, focusing on scientific formula discovery;
