@@ -141,6 +141,8 @@ Traffic Signal Control (TSC):
   desc: data-driven multi-agent LLM for local intersection network, working on Jinan, Hangzhou, and NYC data; with cityflow sim
 - title: 'State-of-art review of traffic signal control methods: challenges and opportunities'
   desc: a review focusing on traditional methods of TSC, span 2015-2019
+- title: "Traffic Signal Control via Reinforcement Learning: A Review on Applications and Innovations"
+  desc: a fine review, with each paper listed + short description; cover most aspects of RL; may be useful as an index to TSC + RL papers
 
 Traffic flow prediction:
 - title: "Tpllm: A traffic prediction framework based on pretrained large language models"
@@ -170,6 +172,8 @@ other techniques:
   desc: elementary work of traffic theory-aware agent as traffic engineer; few-shot tuning of LLM
 - title: "Leveraging Large Language Models (LLMs) for Traffic Management at Urban Intersections: The Case of Mixed Traffic Scenarios"
   desc: a strange paper, modeling microscopic vehicle behavior at intersection with LLM, not TSC on intersection
+- title: "CityFlow: A Multi-Agent Reinforcement Learning Environment for Large Scale City Traffic Scenario"
+  desc: cityflow simulator paper, a fast cpp tsc RL simulator with at most 25x speedup compared to sumo
 
 just for interest:
 - title: ""
