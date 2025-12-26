@@ -146,6 +146,10 @@ Traffic Signal Control (TSC):
 - title: "CityFlowER: An Efficient and Realistic Traffic Simulator with Embedded Machine Learning Models"
   desc: CityFlow subsequent work, only get little attention; improved API call efficiency
 
+RL in TSC:
+- title: "Deep Reinforcement Learning for Intelligent Transportation Systems: A Survey"
+- title: "A survey on deep reinforcement learning approaches for traffic signal control"
+
 Traffic flow prediction:
 - title: "Tpllm: A traffic prediction framework based on pretrained large language models"
   desc: TPLLM, fine-tuned GPT2, CNN for temporal patterns, GCN for spatial patterns, fusion by addition, LoRA + L1 loss
