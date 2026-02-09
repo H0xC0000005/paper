@@ -149,12 +149,18 @@ Traffic Signal Control (TSC):
 RL in TSC:
 - title: "Deep Reinforcement Learning for Intelligent Transportation Systems: A Survey"
 - title: "A survey on deep reinforcement learning approaches for traffic signal control"
+- title: "Deep Reinforcement Learning for Traffic Light Control in Intelligent Transportation Systems"
+  comment: what the hell? this paper runs some basic DQN and DDPG & green wave and get some citations?
 - fairness:
   - title: "A Deep Reinforcement Learning Approach for Fair Traffic Signal Control"
   - title: "Phase Re-service in Reinforcement Learning Traffic Signal Control"
   - title: "A new Potential-Based Reward Shaping for Reinforcement Learning Agent"
     comment: not TSC specific, but opening work of reward shaping and potential function design in RL
   - title: "MonitorLight: Reinforcement Learning-based Traffic Signal Control Using Mixed Pressure Monitoring"
+
+General RL:
+- title: "RUDDER:Return Decomposition for Delayed Rewards"
+  comment: pioneering work on delayed reward problem, which is serious in TSC domain
 
 Traffic flow prediction:
 - title: "Tpllm: A traffic prediction framework based on pretrained large language models"
