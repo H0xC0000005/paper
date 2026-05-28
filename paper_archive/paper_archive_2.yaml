@@ -1,0 +1,40 @@
+unclassified:
+- title: "ChatSUMO: Large Language Model for Automating Traffic Scenario Generation in Simulation of Urban MObility"
+  summary: "mere integration of scenario creation, scenario import, scenario modification, and LLM-assisted simulation; 
+    not much methodological novelty though somehow cited"
+- title: "Gradient-based Trajectory Optimization with Parallelized Differentiable Traffic Simulation"
+  summary: "differentiable traffic simulation with waymo (WOMD) dataset on IDM following. two novelties: 1, parallization of IDM model; 
+    2, directly optimize IDM parameters to do trajectory prediction on the curve (instead of end to end learning)"
+- title: "Language-Guided Traffic Simulation via Scene-Level Diffusion"
+  date: 2023.06.10
+  summary: "foundation paper of LLM + traffic simulation, CTG++; use diffusion model for scenario (trace) generation for a few vehicles (usually two); 
+    LLM to understand text guidance: translate user prompt into loss function (as generation guidance)"
+- title: "Differentiable Hybrid Traffic Simulation"
+  date: 2022.10.14
+  summary: "first differentiable traffic simulator for macro and hybrid traffic simulation; suggest to use gradients to directly 
+    plug in nn training, very conventional and straightforward use; macro based on ARZ model
+    probablistic method to convert between macro and micro, differentiable
+    magnutude faster than autodiff; optimizing over autodiff a good method?"
+
+survey:
+- title: "Large language models empowered agent-based modeling and simulation: a survey and perspectives"
+  date: 2023.12.19
+  summary: "highly cited LLM application survey paper, outdated but has a detailed view in: social, economical, physical, cyber, hybrid application of LLMs in ABMS"
+- title: "From Individual to Society: A Survey on Social Simulation Driven by Large Language Model-based Agents"
+  date: 2024.12.04
+  summary: "survey on society, but it is really comprehensive and list a very wide ranges of applications.
+    It's category of simulation tasks (individual, scenatio, socieal) and architecture decomposition of each class is meaningful"
+- title: "Large Language Model Agent: A Survey on Methodology, Applications and Challenges"
+  date: 2025.03.07
+  summary: "A highly cited general LLM survey, lists full applications of LLM agents; real-time, transportation, simulation, or digital twin are 
+    totally not in the scope; good for having a brief big picture of current LLM agent development"
+
+
+notes:
+  - "https://arxiv.org/abs/2605.15777: agent's self-confirmation is a problem in regressive task; tackle this with LLM harness?"
+  - "distinct value of differentiable simulation: optimize simulation model parameter directly to fit data by simulation gradients"
+  - "LLMs in system simulation: somehow indistinguishable to human in social science subjects, but in phys domain
+    sim to real gap is harder to address"
+
+terminologies:
+  - ABMS: "agent based modeling and simulations"
