@@ -1,0 +1,29 @@
+As for possible next topics, looking at the project's work packages, some angles to explore
+(by seeing what has happened in the literature in the past year or two) are (all targeting
+the transportation domain):
+Integration of real-time data, digital twin style. There is of course endless related work
+on this, but there is a lot of freedom to hop on any promising development of the past 1-2
+years, e.g., LLM-related ideas.
+Dynamic resource allocation for simulation tasks, particularly simulation-based optimization
+(where each run's cost is hard to predict, the number of replications at each parameter
+combination depends affects the statistical significance, and the concrete task may have
+very particular execution patterns, e.g., rounds of k concurrent runs in genetic
+algorithm-based simulation optimization). When making use of heterogeneous hardware (say,
+CPUs + GPUs) it becomes even more complicated. I've been planning to formulate the
+underlying statistics + optimization problem for the simulation domain for many years, not
+sure whether anyone has done it in the meantime.
+Faster optimization across transportation simulations by:
+The use of hardware accelerators (this might end up being GPUs, where we have a lot of prior
+work, but as far as I know nothing exists that would be ready for practical use). Some kind
+of co-location of the simulation state in VRAM in a way to facilitate machine learning tasks
+could be explored.
+Dynamic switching of abstraction levels (micro, meso, macro). This is a pretty old idea, but
+there might be space for smart decision making to choose areas of interest at runtime based
+on context information.
+Differentiable simulation. There is a decent amount of prior work on AutoDiff-based
+differentiable simulation for microscopic traffic simulation. What is probably underexplored
+is the integration of such approaches with more complex models beyond car-following models +
+some representation of traffic lights. Another angle is the use of the gradients not just for
+optimization but directly in machine learning tasks, e.g., making use of the fact that the
+simulation gradients can be evaluated directly instead of having to be estimated based on
+black box samples of the simulation's output statistics.
