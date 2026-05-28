@@ -28,6 +28,9 @@ survey:
   date: 2025.03.07
   summary: "A highly cited general LLM survey, lists full applications of LLM agents; real-time, transportation, simulation, or digital twin are 
     totally not in the scope; good for having a brief big picture of current LLM agent development"
+- title: "Agent Harness for Large Language Model Agents: A Survey"
+  date: 2026.04.09
+  summary: ""
 
 
 notes:
