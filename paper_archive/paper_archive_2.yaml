@@ -15,6 +15,24 @@ unclassified:
     plug in nn training, very conventional and straightforward use; macro based on ARZ model
     probablistic method to convert between macro and micro, differentiable
     magnutude faster than autodiff; optimizing over autodiff a good method?"
+- title: "Differentiable Agent-Based Simulation for Gradient-Guided Simulation-Based Optimization"
+  date: 2021.03.23
+  summary: "very early proof of concept paper, convert program steps (e.g. iteration, branch) into differentiable functions by adding auxiliary functions (e.g. sigmoid, period, range); 
+    use autodiff for the entire flow, with man full scans (e.g. to get the leading vehicle in IDM, need to scan all vehicles); 
+    this can be very inefficient when scaled as the style of always add components is 'flood style' e.g. all branches are executed and use mask to weighted average;
+    proof of concept experiments (freeway and TSC and epidemic model)"
+- title: "Traffic-Aware Autonomous Driving with Differentiable Traffic Simulation"
+  date: 2023.04.07
+  note: "not viewed yet. contains explicit analytic jacobian gradient of IDM, maybe useful later"
+
+misc or utility:
+- title: "Categorical Reparameterization with Gumbel-Softmax"
+  date: 2017.08.05
+  summary: "gumbel softmax. use reparameterization trick to move the stochastic node out of the gradient path; 
+    also reviewed score function estimator (REINFORCE) and straight through estimator (biased)"
+- title: "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation"
+  date: 2013.08.15
+  summary: "original paper of straight through estimator (biased); also contain unbiased gradient estimator for stochastic neurons"
 
 survey:
 - title: "Large language models empowered agent-based modeling and simulation: a survey and perspectives"
@@ -30,7 +48,12 @@ survey:
     totally not in the scope; good for having a brief big picture of current LLM agent development"
 - title: "Agent Harness for Large Language Model Agents: A Survey"
   date: 2026.04.09
-  summary: ""
+  summary: "proposed 6 components for harness structure: E—Executionloop, T—Toolregistry, C—Contextmanager, S—Statestore, L—Lifecyclehooks, V—Evaluationinterface 
+    analyzed structural necessity and failure modes of these components 
+    good to have a measurable decomposition and definition of harness 
+    history of harness: prompt engineering (-2024) -> context management (2024-2025) -> agent harness (2025-) 
+    good examples elaborated (e.g. codex) 
+    idea of meta-harness: search the space: What harness design, discovered through agentic search, enables this agent to perform optimally?"
 
 
 notes:
@@ -38,6 +61,32 @@ notes:
   - "distinct value of differentiable simulation: optimize simulation model parameter directly to fit data by simulation gradients"
   - "LLMs in system simulation: somehow indistinguishable to human in social science subjects, but in phys domain
     sim to real gap is harder to address"
+  - "for differentiable simulation, categorial selection is a very hard aspect to model; because 'choosing the class x+0.01' or something like this does not make sense;
+    categorial selection should be avoided as much or if math tricks exist to prove that soft version of it makes sense or is end to end effective"
+  - "continued from categorial selection in differentiable simulation: straight through estimator may be useful (forward pass with hard selection, backward pass pretends to be differentiable);
+    worth trying or is it a good component in the differentiable simulation stack?"
 
 terminologies:
   - ABMS: "agent based modeling and simulations"
+
+
+ideas:
+  differentiable simulation:
+    - "one way to do differentiable simulation is to make the simulation program differentiable (substituting branch, iteration, and flow with 
+      auxilliary functions (e.g. minimum, sigmoid, inrange (for attribute selection)) to make them differentiable); what about using LLM to do this conversion? 
+      (e.g. using LLM to convert a non-differentiable traffic simulation program into a differentiable one, 
+      by substituting the non-differentiable components with differentiable approximations)
+      LLM can also take care of driving model analytic gradient but it may not be reliable"
+    - "differentiable simulation is fast in parameter optimization (which requires many iterations in grad-free methods), 
+      and it is useful in runtime data processing; this is naturally suitable to digital twin idea, and may worth trying"
+    - "notice: the combination of differentiable components may not yield expected good or direct parameter optimization capability; 
+      the component though differentiable can still produce misleading gradients, e.g. in sigmoid too large slope provides no hints far from the boundary, 
+      and too small slope provides no hints near the boundary; any method to address this with non-end-to-end or analytic methods?"
+    - "GPT suggestion: 4. Better inverse problems.
+      You can infer hidden causes from observed outcomes: OD demand, driver behavior parameters, 
+      latent congestion state, compliance rates, incident severity, route preferences, or unknown control settings.
+      worth exploring. may be deleted later"
+    - "another use of differentiable simulation is that it can quickly train the model with hints directly from the simulator; 
+      probably pre-training the model with differentiable simulation can be a good idea, and then fine-tune with the big bulk simulator with non-differentiable components; 
+      this can be a good way to make use of derivative hints while mitigating the oversimplification issues of differentiable simulation"
+  
