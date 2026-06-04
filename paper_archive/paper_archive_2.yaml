@@ -24,6 +24,14 @@ unclassified:
 - title: "Traffic-Aware Autonomous Driving with Differentiable Traffic Simulation"
   date: 2023.04.07
   note: "not viewed yet. contains explicit analytic jacobian gradient of IDM, maybe useful later"
+- title: "End-to-end differentiable network traffic simulation with dynamic route choice"
+  date: 2026.04.29
+  summary: "major contribution is modeling LWR, link transmission model (LTM), and dynamic user optimal (DUO) in macro simulation; 
+    construct the gradient paths with these components and use autodiff to get the gradient; 
+    chicago toll is used as the example, while using this macro model in OD fitting is an interesting idea"
+- title: "MODELING METRO PASSENGER ROUTING CHOICES WITH A FULLY DIFFERENTIABLE END-TO-END SIMULATION-BASED OPTIMIZATION (SBO) "
+  date: 2025.07.?
+  summary: "OD fitting with HK metro real data; use differentiable simulation to fit the OD parameters and use matrix based optimization to accelerate"
 
 misc or utility:
 - title: "Categorical Reparameterization with Gumbel-Softmax"
@@ -65,6 +73,16 @@ notes:
     categorial selection should be avoided as much or if math tricks exist to prove that soft version of it makes sense or is end to end effective"
   - "continued from categorial selection in differentiable simulation: straight through estimator may be useful (forward pass with hard selection, backward pass pretends to be differentiable);
     worth trying or is it a good component in the differentiable simulation stack?"
+  - "differentiable conditional branch: min/max is a way to handle branch rather than unrolling the branch or selection; based on 'meaasure zero' of min/max; 
+    in general, measure zero functions are acceptable as differentiable surrogate"
+  - "in terms of OD or flow analysis, differential macroscopic models seems be the major branch"
+  - "STE, gumbel softmax, and all other surrogate representation tricks that models a discrete process all have gradient bias; 
+    by annealing to the real distribution bias is reduced but variance may explode; this is a typical bias-var tradeoff; 
+    when modeling a continuous target this can be unbiased"
+  - "problem in training a model with surrogate gradient modeling a discrete process:
+    since the process is smoothed, there is a 'changing band' which is fine when continuous gradient is available, 
+    but during deployment etc. the discrete process is hard sampled and the 'decision boundary' can appear in anywhere inside the band, which can cause unexpected behavior;"
+  - "a fundamental tradeoff: gradient mismatch (STE family) vs relaxation mismatch (surrogate gradient)"
 
 terminologies:
   - ABMS: "agent based modeling and simulations"
