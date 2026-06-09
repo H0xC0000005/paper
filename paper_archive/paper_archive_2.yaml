@@ -41,6 +41,26 @@ misc or utility:
 - title: "Estimating or Propagating Gradients Through Stochastic Neurons for Conditional Computation"
   date: 2013.08.15
   summary: "original paper of straight through estimator (biased); also contain unbiased gradient estimator for stochastic neurons"
+- title: "Smoothing Methods for Automatic Differentiation Across Conditional Branches"
+  date: 2023.12.13
+  summary: "paper of smooth interpretation and discograd; SI is to use gaussian kernel to smooth branching condition by using CDF to 
+    represent condition; discograd uses monte carlo method to estimate the distribution of arbitrary branches;
+    experiments show that SI can produce small gradients and low recall, while discograd need to estimate the branching distribution 
+    and have bias & local noise"
+- title: "Automatic Gradient Estimation for Calibrating Crowd Models with Discrete Decision Making"
+  summary: "continuation of discograd (by same authors); not much novelty, mainly experiment paper"
+- title: "Automatic Differentiation of Programs with Discrete Randomness"
+  date: 2023.01.09
+  summary: "stochasticAD. use reparameterization trick to introduce decision boundary modeling over discrete random sampling; 
+    the method is analytic and unbiased but have no way to address branching mass distribution of arbitrary branching "
+- title: "Systematically Differentiating Parametric Discontinuities"
+  date: 2021.07.19
+  summary: "Teg paper. propose the language 'teg' to handle discrete boundary problem in the integration, which is common in CV, 
+    rendering, physics, etc. explicitly models dirac delta and use reparameterization trick to cancel the effect of delta 
+    to perform the integration of a function of parameters"
+- title: "Distributions for Compositionally Differentiating Parametric Discontinuities"
+  date: 2024.04.29
+  summary: "potto paper, following up work by the same group"
 
 survey:
 - title: "Large language models empowered agent-based modeling and simulation: a survey and perspectives"
@@ -83,6 +103,16 @@ notes:
     since the process is smoothed, there is a 'changing band' which is fine when continuous gradient is available, 
     but during deployment etc. the discrete process is hard sampled and the 'decision boundary' can appear in anywhere inside the band, which can cause unexpected behavior;"
   - "a fundamental tradeoff: gradient mismatch (STE family) vs relaxation mismatch (surrogate gradient)"
+  - "differentiable variant of branching operation: should still be 'arithmatic' according to the current literature; 
+    e.g. checking attributes of object as the branching condition cannot be handled now; what are the doable ways to handle this?
+    "
+  - "fundamental issue of arbitrary differential path: by log-derivative trick, the expectation over the derivative of branching 
+    is the sum of path-wise derivative and mass-distribution over the branching (sum rule); 
+    traditional AD ignores the branching mass which (equivalently) creates multiple discrete conditions for the model; 
+    the literature focuses on how to estimate or smooth or relax the mass-distribution part "
+  - "path explosion problem of arbitrary branching: e.g. a branching inside the loop have exponential possible path, creating explosive dimension 
+    for unbiased mass estimation; some works propose method to restrict the dimension to fixed size or linear but that of course have to drop some 
+    branches or create bias (e.g. by estimating by gaussian)"
 
 terminologies:
   - ABMS: "agent based modeling and simulations"
