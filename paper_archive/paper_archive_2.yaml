@@ -32,6 +32,13 @@ unclassified:
 - title: "MODELING METRO PASSENGER ROUTING CHOICES WITH A FULLY DIFFERENTIABLE END-TO-END SIMULATION-BASED OPTIMIZATION (SBO) "
   date: 2025.07.?
   summary: "OD fitting with HK metro real data; use differentiable simulation to fit the OD parameters and use matrix based optimization to accelerate"
+- title: "Estimating multi-class dynamic origin-destination demand through a forward-backward algorithm on computational graphs"
+  date: 2020.10.?
+  summary: "construct a forward-backward computation graph for OD estimation. derive analytic formulation for flow and travel time 
+    and their gradients. use meso-scale, individual vehicles still have discrete decisions. the route gradient is estimated (by sampling).
+    use this graph to fit both flow and travel time on networks with different sizes. 
+    notice that the gradient is not analytically a chain and cannot be directly applied to differentiable simulation because 
+    it still contains discrete decision process"
 
 misc or utility:
 - title: "Categorical Reparameterization with Gumbel-Softmax"
@@ -113,9 +120,10 @@ notes:
   - "path explosion problem of arbitrary branching: e.g. a branching inside the loop have exponential possible path, creating explosive dimension 
     for unbiased mass estimation; some works propose method to restrict the dimension to fixed size or linear but that of course have to drop some 
     branches or create bias (e.g. by estimating by gaussian)"
+  - "two most improtant dimensions to reconstruct OD from traffic flow data: traffic flow over each link, and travel time 
+    (of each vehicle class) over the link"
 
-terminologies:
-  - ABMS: "agent based modeling and simulations"
+
 
 
 ideas:
