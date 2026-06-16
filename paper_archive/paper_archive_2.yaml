@@ -59,7 +59,9 @@ misc or utility:
 - title: "Automatic Differentiation of Programs with Discrete Randomness"
   date: 2023.01.09
   summary: "stochasticAD. use reparameterization trick to introduce decision boundary modeling over discrete random sampling; 
-    the method is analytic and unbiased but have no way to address branching mass distribution of arbitrary branching "
+    the method is analytic and unbiased but have no way to address branching mass distribution of arbitrary branching 
+    correction: its probability reparameterization do represent the branching mass. 
+    its limitation is mainly native forward mode and no guarantee on bias/variance"
 - title: "Systematically Differentiating Parametric Discontinuities"
   date: 2021.07.19
   summary: "Teg paper. propose the language 'teg' to handle discrete boundary problem in the integration, which is common in CV, 
@@ -68,6 +70,16 @@ misc or utility:
 - title: "Distributions for Compositionally Differentiating Parametric Discontinuities"
   date: 2024.04.29
   summary: "potto paper, following up work by the same group"
+- title: "ADEV: Sound Automatic Differentiation of Expected Values of Probabilistic Programs"
+  note: "not read; it is very theory-heavy, used gpt to generate summary"
+  summary: "Do not differentiate one sampled execution path as if randomness were fixed.
+    Instead, transform the probabilistic program into a new estimator program whose expectation equals the derivative of 
+    the original program's expectation."
+- title: "A New Unbiased Stochastic Derivative Estimator for Discontinuous Sample Performances with Structural Parameters"
+  date: 2018.02.03
+  summary: "a highly cited pivot IPA+LR (likelihood ratio, or score function) paper; very cybernetics backgrounded; proposed
+    concrete derivations of derivative target and explicitly model both pathwise and moving branching mass terms; 
+    yet can only apply if the task analytically allows this (as early stage limitation)"
 
 survey:
 - title: "Large language models empowered agent-based modeling and simulation: a survey and perspectives"
@@ -89,6 +101,12 @@ survey:
     history of harness: prompt engineering (-2024) -> context management (2024-2025) -> agent harness (2025-) 
     good examples elaborated (e.g. codex) 
     idea of meta-harness: search the space: What harness design, discovered through agentic search, enables this agent to perform optimally?"
+- title: "Perturbation analysis: A framework for data-driven control and optimization of discrete event and hybrid systems"
+  date: 2018.04.13
+  summary: "infinitesimal perturbation analysis survey. very cybernetics grounded and provided a brief timeline of how the differentials evolve 
+    over the course of time in terms of the cybernetics. 
+    useful to show the relationship that the current differentiable simulation, discrete random sampling/branching modeling are continuations 
+    or circumvents of IPA which is a very large branch in cybernetics"
 
 
 notes:
