@@ -108,6 +108,9 @@ survey:
     useful to show the relationship that the current differentiable simulation, discrete random sampling/branching modeling are continuations 
     or circumvents of IPA which is a very large branch in cybernetics"
 
+unread_candidates:
+- "Differentiable Discrete Event Simulation for Queuing Network Control"
+- "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation"
 
 notes:
   - "https://arxiv.org/abs/2605.15777: agent's self-confirmation is a problem in regressive task; tackle this with LLM harness?"
@@ -164,3 +167,10 @@ ideas:
       probably pre-training the model with differentiable simulation can be a good idea, and then fine-tune with the big bulk simulator with non-differentiable components; 
       this can be a good way to make use of derivative hints while mitigating the oversimplification issues of differentiable simulation"
   
+  candidates:
+  - reconstruction-to-learning gradient transfer;
+  - amortized differentiable reconstruction;
+  - fine-forward, simplified-backward gradients.
+  - Control-oriented or sensitivity-aware simulator calibration
+  - Simulator gradients as auxiliary supervision rather than the sole training path
+  - Cross-fidelity gradient transfer and correction
