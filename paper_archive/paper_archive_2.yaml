@@ -40,6 +40,25 @@ unclassified:
     notice that the gradient is not analytically a chain and cannot be directly applied to differentiable simulation because 
     it still contains discrete decision process"
 
+microscopic traffic simulation:
+- title: "Fast-Forwarding of Vehicle Clusters in Microscopic Traffic Simulations"
+  date: 2020.06.15
+  summary: "very short paper, proposed fast forwarding of vehicle clusters instead of indivudual vehicle in microscopic sim"
+- title: "Fidelity and Performance of State Fast-forwarding in Microscopic Traffic Simulations"
+  date: 2020.03.?
+  summary: "fidelity and cost learning of single vehicle fast forwarding of vehicle in microscopic sim, use singapore network as reference"
+
+Autodiff:
+- title: "You Only Linearize Once Tangents Transpose to Gradients"
+  date: 2022.12.06
+  summary: "very innovative paper: assert that forward and backward pass can be unified via linearization; the backward pass is the transpose of 
+    the linearized tangent path (instead of non-linear primal) of the forward pass; proved that AD is structurally linear for the selected set 
+    of operations; prone to extension of operations"
+- title: "Efficient and Modular Implicit Differentiation"
+  date: 2022.10.21
+  summary: "propose implicit AD method; the core idea is to implicitly differentiate f(x(theta), g(theta)) without differentiating the possible non-smooth, non-convex component g();
+    the formulation is especially useful for ML where proximal grad fix points are often the form of op target"
+
 misc or utility:
 - title: "Categorical Reparameterization with Gumbel-Softmax"
   date: 2017.08.05
@@ -107,10 +126,19 @@ survey:
     over the course of time in terms of the cybernetics. 
     useful to show the relationship that the current differentiable simulation, discrete random sampling/branching modeling are continuations 
     or circumvents of IPA which is a very large branch in cybernetics"
+- title: "A review of automatic differentiation and its efficient implementation"
+  date: 2018.02.23
+  summary: "well known AD literature review, covers typical AD, checkpointing, supernode, retaping, and other computational and mathematical tricks; 
+    but this is too old"
+- title: "A taxonomy of automatic differentiation pitfalls"
+  date: 2024.07.08
+  summary: "interesting survey, list the common AD failures but mainly focus on implementation pitfalls and suggestions to bridge the implementation gap.
+    does not count mathematical bad formulation like what discrete random process differentiable modeling usually do"
 
 unread_candidates:
 - "Differentiable Discrete Event Simulation for Queuing Network Control"
 - "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation"
+- "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
 
 notes:
   - "https://arxiv.org/abs/2605.15777: agent's self-confirmation is a problem in regressive task; tackle this with LLM harness?"
