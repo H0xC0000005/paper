@@ -58,6 +58,31 @@ Autodiff:
   date: 2022.10.21
   summary: "propose implicit AD method; the core idea is to implicitly differentiate f(x(theta), g(theta)) without differentiating the possible non-smooth, non-convex component g();
     the formulation is especially useful for ML where proximal grad fix points are often the form of op target"
+- title: "Do Differentiable Simulators Give Better Policy Gradients?"
+  date: 2022.08.22
+  summary: "interesting paper, study whether first order gradient (simulator gradient) is better than the zero order gradient (policy gradient)
+    core conclusion: FoBG (batched gradient) has low variance but structural bias (related to discontinuity, that is also asserted in discrete random process handling),
+    and ZoBG can be theoretically unbiased (and often the case) but high variance.
+    however FoBG sometimes also produce high variance when discontinuities and jumps comes into play, and ZoBG is better in such cases 
+    propose an initial method to dynamically mix FoBG and ZoBG to inherit advantages of both"
+- title: "A taxonomy of automatic differentiation pitfalls"
+  date: 2024.07.08
+  summary: "interesting survey, list the common AD failures but mainly focus on implementation pitfalls and suggestions to bridge the implementation gap.
+    does not count mathematical bad formulation like what discrete random process differentiable modeling usually do"
+- title: "Conservative set valued fields, automatic differentiation, stochastic gradient methods and deep learning"
+  date: 2020.04.09
+  summary: very important paper, propose conservative field (for scalar) and map (for vector) to reformulate the AD process, that is conservative (integral is 
+    the diff of potential, thus not dependent on path over kinks and discontinuities), can be chained (especially for DL), can reconstruct the original target 
+    (the integral and derivative is two-way), can give exact set of Aumann inteegration). thus it does not require exact convexity and can tolerate branches
+- title: "Automatic Differentiation of Optimization Algorithms with Time-Varying Updates"
+  date: 2024.10.24
+  summary: "recent paper studying the effect of varying timestep. core challenge: traditional iterative optimization use fixed update map (static scenario), 
+    and varying timestep can change this; core method: treat AD as error recurrence to x^*; requires contractive around the final convergence and 
+    same fixed point, and thus evaluating the derivative in the final region is equivalent to evaluating that on the optimal solution, 
+    the effect of varying timestep is not decisive in this case; 
+    from a side reveals why my project fails for sparse grad since backward target is changed, breaks the required property"
+
+
 
 misc or utility:
 - title: "Categorical Reparameterization with Gumbel-Softmax"
@@ -130,10 +155,6 @@ survey:
   date: 2018.02.23
   summary: "well known AD literature review, covers typical AD, checkpointing, supernode, retaping, and other computational and mathematical tricks; 
     but this is too old"
-- title: "A taxonomy of automatic differentiation pitfalls"
-  date: 2024.07.08
-  summary: "interesting survey, list the common AD failures but mainly focus on implementation pitfalls and suggestions to bridge the implementation gap.
-    does not count mathematical bad formulation like what discrete random process differentiable modeling usually do"
 
 unread_candidates:
 - "Differentiable Discrete Event Simulation for Queuing Network Control"
