@@ -81,7 +81,28 @@ Autodiff:
     same fixed point, and thus evaluating the derivative in the final region is equivalent to evaluating that on the optimal solution, 
     the effect of varying timestep is not decisive in this case; 
     from a side reveals why my project fails for sparse grad since backward target is changed, breaks the required property"
-
+- title: 'The Curse of Unrolling: Rate of Differentiating Through Optimization'
+  date: 2023.08.25
+  summary: "an initial work on the distinction between primal optimization target and the gradient convergence (jacobian). for quadratic target, there is 
+    an outer exponentially decay gain and inner linearly increase term, and the linear term can introduce an initial burn-in period for jacobian; 
+    lesson: good primal convergence can with bad jacobian direction; derivative usefulness itself is not fully dependent 
+    on the primal convergence;
+    tested only on quadratic target, and propose quadratic-only optimizer (sobolev and chebyshev) but the core idea may generalize on my project"
+- title: "Automatic differentiation of nonsmooth iterative algorithms"
+  date: 2022.06.02
+  summary: "early work of implicit differentiation on bi-level optimization problem. tackes non-smooth horizon, also assumes contractive fixed point neighborhood, 
+    and cannot deal with non-continuous functions generally; or can deal with kinks (even if kink position moves with theta) generally but cannot deal with jumps 
+    use set-valued piggyback recursion and contractive assumption to handle derivative discontinuities; and propose an initial linear convergence bound 
+    for ITD (iterative differentiation, compared to AID approx implicit diff);
+    also propose a simple example to prove that the formulation can diverge; consistent observation: primal convergence path does not imply 
+    gradient quality by default
+    the core culprit of non-smooth should be there can be no single jacobian for some steps with piggyback backprop"
+- title: "Nonsmooth Implicit Differentiation: Deterministic and Stochastic Convergence Rates"
+  date: 2026.06.04
+  summary: "subsequent work from Automatic differentiation of nonsmooth iterative algorithms. Different from that, propose AID instead of ITD, 
+    propose AID-FP: fix the fixed-point state, solve the derivative problem there;
+    NSID: tackles stochastic process by estimating an implicit and conservative JVP; 
+    prove a better bound than the previous work"
 
 
 misc or utility:
