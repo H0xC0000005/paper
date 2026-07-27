@@ -39,6 +39,12 @@ unclassified:
     use this graph to fit both flow and travel time on networks with different sizes. 
     notice that the gradient is not analytically a chain and cannot be directly applied to differentiable simulation because 
     it still contains discrete decision process"
+- title: "Rectify, Don't Regret: Avoiding Pitfalls of Differentiable Simulation in Trajectory Prediction"
+  date: 2026.03.24
+  summary: "very quick work proposing a training framework for ADEV trajectory prediction. core ideas: 
+    rollout the prediction only partly so that error won't accumulate, do fresh prediction at waypoint
+    diffsim can leak future ground truth information for the trajectory mathematically so the framework is proposed non-diff (probably the most important lesson)
+    decompose the trajectory problem into classification+regression"
 
 microscopic traffic simulation:
 - title: "Fast-Forwarding of Vehicle Clusters in Microscopic Traffic Simulations"
@@ -47,6 +53,32 @@ microscopic traffic simulation:
 - title: "Fidelity and Performance of State Fast-forwarding in Microscopic Traffic Simulations"
   date: 2020.03.?
   summary: "fidelity and cost learning of single vehicle fast forwarding of vehicle in microscopic sim, use singapore network as reference"
+
+meso traffic simulation:
+- title: "Traffic Simulation Performance Optimization through Multi-Resolution Modeling of Road Segments"
+  date: 2015.06.10
+  summary: "elementary techniques about meso traffic simulation; handle micro-macro and macro-micro transition specifically, 
+    and introduced basic techniques such as ghost vehicle and macro-micro vehicle stacking (like the vertical stacking
+    method used in some TSC)"
+- title: "Bridging the Gap Between Mesoscopic Transport Planning and Microscopic Traffic Simulation: An Analytical and Numerical Analysis of Traffic Dynamics"
+  date: 2022.10.28
+  summary: "a comparison work, mainly compare MATsim amd SUMO for consistency between meso and micro behavior. the paper lists quite a couple of flow, speed, and congestion
+    analysis as comparison between the two.
+    key ideas: they cannot be used together since behavior differs much when MATsim uses less Resolution
+    SUMO is used as micro ground truth to compare with; the two behaves similarly under static flow conditions but in non-static conditions they can differ much
+    main difference are: sumo (by nature) models vehicle interaction so flow speed is usually lower than legal speed, also there are bottlenecks in the network;
+    and thus flow can differ as a result of different speed behavior"
+- title: "Multiresolution Modeling for Traffic Analysis: Guidebook"
+  date: 2022.02.?
+  summary: "a guidebook from US fed highway admin. contains engineering intro, methodology, and flow; they are rather practical than theoretical, 
+    and I only read the intro part and had a glimpse at examples but nevertheless it presents meso sim from the engineering perspective"
+
+differentiable traffic simulation:
+- title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
+  date: 2026.03.26
+  summary: "recent work on differentiable traffic simulation focusing on efficiency. cooperated car following model and transition model, as well as 
+    handling continuous computation graph across intersections via STE; result in real road networks (efficiency) is significant, like what cityflow tries to achieve;
+    it is limited though because the model is rather simple; no TSC, and no micro overtaking so that they can get rid of any conditional executions"
 
 Autodiff:
 - title: "You Only Linearize Once Tangents Transpose to Gradients"
@@ -244,3 +276,9 @@ ideas:
   - Control-oriented or sensitivity-aware simulator calibration
   - Simulator gradients as auxiliary supervision rather than the sole training path
   - Cross-fidelity gradient transfer and correction
+
+ideas (7.27):
+- "different gradient resolution ~= variable time step, true; but variable time step is probably difficult to be differentiated. any work on this, or applying 
+  a variable gradient resolution on a global synced step size is a novel stuff and carry efficiency or realism value?"
+- "lane changing is hard to model indeed in downstream optimization, because in nature it involves discrete exploration; but what if 
+  the simulator just supports differentiating lane changing, and separate the exploration problem? in this case, it is like 'differentiating through' the decision"
