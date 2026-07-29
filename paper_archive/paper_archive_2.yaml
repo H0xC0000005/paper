@@ -53,6 +53,36 @@ microscopic traffic simulation:
 - title: "Fidelity and Performance of State Fast-forwarding in Microscopic Traffic Simulations"
   date: 2020.03.?
   summary: "fidelity and cost learning of single vehicle fast forwarding of vehicle in microscopic sim, use singapore network as reference"
+- lane changing model:
+  - title: "SUMO's Lane-Changing Model "
+    date: 2015.?.?
+    summary: "SUMO's lane changing model LC2013. It is more engineering oriented, most important value is proposing 4 classes of lane changing: 
+      strategic (follow link transition constraints), cooperative, tactic, and forced (regulatory)
+      the model is rule based so it is not relevant to differentiable traffic simulation; it discuss the situation of deadlock which has 
+      some modeling value?"
+  - title: "General Lane-Changing Model MOBIL for Car-Following Models"
+    date: 2007.01.?
+    summary: "MOBIL lane changing model. the novelty is to propose a polite factor term to maximize accel gain with that polite factor;
+      tested with IDM: IDM + lane changing is a mainstream in freeway traffic research"
+  - title: "Modelling lane changing and merging in microscopic traffic simulation"
+    date: 2002.?.?
+    summary: "highly cited paper, proposing sitrus simulator framework. lane changing is an important component and the component is rule-based, 
+      looking at whether before- and after- changing's acceleration for both ego and trailing vehicles are acceptable,
+      hence in nature the behavior is cooperative
+      they use hardcoded lane changes when forced: just link the ego to the newly changed lane by scanning backward for the first slot with acceptable accel 
+      and require the two vehicles to cooperate; the lane changing is instantious
+      in other words this work focuses on the decision rather than the lane changing process"
+  - title: "Integrated driving behavior modeling"
+    date: 2007.?.?
+    summary: "another more detailed lane changing model. the core idea is that lane change acceleration has different stages, and each stage can be individually modeled. 
+      driver should first find a reasonable gap, and accel/decel to fit a reasonable gap, and then complete the change and apply new accel. 
+      old and new successive vehicles will also have to update their acceleration. key novelties are two: 
+      1, it explicitly separate the accelrations for each proposed stage and
+      2, it explicitly model the accel behavior for preparation of the lane change
+      limitation: the operaion is not cooperative in nature; thus as the available gap can change, in dense flow, the fetched gap may be no longer available later, 
+      causing inefficiency; in the experiment they also report that outermost lane usage is high (no modeling of keeping on fast lanes, 
+      probably because too adhering to the traffic rule?)"
+
 
 meso traffic simulation:
 - title: "Traffic Simulation Performance Optimization through Multi-Resolution Modeling of Road Segments"
