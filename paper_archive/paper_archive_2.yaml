@@ -238,6 +238,15 @@ survey:
   date: 2018.02.23
   summary: "well known AD literature review, covers typical AD, checkpointing, supernode, retaping, and other computational and mathematical tricks; 
     but this is too old"
+- title: "Saltation Matrices: The Essential Tool for Linearizing Hybrid Dynamical Systems"
+  date: 2024.08.30
+  summary: "saltation matrices review. it is a technique from cybernetics that models linearity of parameters in hybrid dynamic systems: the transition reaches a guard,
+    and then state reset, then evolve under a new dynamic. saltation matrices can correctly consider the temporal relationship of the even boundary given the 
+    event will happen, and give correct derivative for the sampled trace between a perturbed trace. the key is the perturbed trace can trigger the event at a different time 
+    and two traces have a time piece evolving under different dynamics and states. 
+    the key idea is to model the temporal sensitivity, or generally, sensitivity across a dynamic boundary that can be dependent on the parameter, given that in the 
+    locality this event will happen; as a contrary, probablistic mass modeling models another aspect: the chance of the event to happen."
+
 
 unread_candidates:
 - "Differentiable Discrete Event Simulation for Queuing Network Control"
