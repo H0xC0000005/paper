@@ -102,6 +102,19 @@ meso traffic simulation:
   date: 2022.02.?
   summary: "a guidebook from US fed highway admin. contains engineering intro, methodology, and flow; they are rather practical than theoretical, 
     and I only read the intro part and had a glimpse at examples but nevertheless it presents meso sim from the engineering perspective"
+- title: "Efficient Gradient-Based Calibrations with A Differentiable Dynamic Traffic Assignment (DTA) Simulation Model by Iterative Backpropagation (IB) And Auto-Differentiation "
+  date: 2025.09.16-18 
+  summary: "p68 from abstract book of DTA conference 10TH INTERNATIONAL SYMPOSIUM ON DYNAMIC TRAFFIC ASSIGNMENT. short work presenting how differentiability 
+    is derived from link transmission model plus user equilibrium assumption of dynamic route choice. 
+    use a toy example to very briefly illustrate the idea of optimizing the model parameters. "
+- title: "Revisiting mesoscopic traffic flow simulation in SUMO: Limitations, analysis, and an alternative"
+  date: 2026.07.25
+  summary: "A work that studies meso accuracy in sumo. sumo has its own meso simulation method MESO but it is quite old (2004) 
+    the paper identifies 2 major problems: 1, jam->free two segments have problem in discharge: jam often discharge slowly, resulting in unrealistic discharge; 
+    2, CTM and LTM are sometimes mixed, and since CTM assumes homogeneous traffic while LTM does not, it can result in unrealistic traffic dynamics
+    the paper adopts a discrite version of LIFT(a meso version of LTM in 2026) and asserts in the experiment that 
+    discrete version of LIFT can produce similar enough simulation results compared to micro"
+
 
 differentiable traffic simulation:
 - title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
@@ -109,6 +122,14 @@ differentiable traffic simulation:
   summary: "recent work on differentiable traffic simulation focusing on efficiency. cooperated car following model and transition model, as well as 
     handling continuous computation graph across intersections via STE; result in real road networks (efficiency) is significant, like what cityflow tries to achieve;
     it is limited though because the model is rather simple; no TSC, and no micro overtaking so that they can get rid of any conditional executions"
+- title: "Dynamic network loading: A stochastic differentiable model that derives link state distributions"
+  date: 2011.?.?
+  summary: "Transportation research part B. an early work formulating the differentiable link transmission model 
+    defines upstream and downstream queues, transition into upstream, upstream to downstream, and downstream discharge, as probablistic quantity; 
+    identify the uncongested and congested phases of the link and defines the guard condition of self queue spillback and downstream queue spillback 
+    that would affect discharge or accept rates
+    the model is per-link and very macroscopic sense, there is no modeling of intersections; the flow across the node is fully based on the flow, 
+    which is not accurate in the mesoscopic sense"
 
 Autodiff:
 - title: "You Only Linearize Once Tangents Transpose to Gradients"
