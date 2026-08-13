@@ -115,6 +115,31 @@ meso traffic simulation:
     the paper adopts a discrite version of LIFT(a meso version of LTM in 2026) and asserts in the experiment that 
     discrete version of LIFT can produce similar enough simulation results compared to micro"
 
+macroscopic traffic simulation:
+- title: "Extended macroscopic node model for multilane traffic"
+  date: 2025.04.09
+  summary: "from transportation research part B. generalize the link transmission model to lane-based. traditional link and cell transmission model assumes
+    that the link supports all movements; also, if the flow is constrained by the downstream availability, all movements will be reduced proportionally, 
+    which is unreallistic as different movements hardly can be affected uniformly by downstream bottlenecks
+    generalize the model to lane-expanded nodes, generalize the movement matrix to lane-based, and prove that the new model is FIFO by movement (with lane equilibrium).
+    the implicit lane but not expanding the links circumvents the problem of route explosion upon expanding the lanes. 
+    the work also uses user equilibrium (wardrop's principle) to determine the equilibrium flow of each lane (actually per movement group, 
+    as the paper proves that for each movement the resistant of each lane is the same) and formulate this as a variational inequality problem
+    the work guarantees that the VI solution is unique and is bi-relationship with the flow solving
+    also, compared to traditional LTM, the flow adds an additional step to determine the resistance of each lane and lane selection rebalance 
+    which are natural additions of the lane component"
+- title: "The continuous signalized (COS) node model for dynamic traffic assignment"
+  date: 2023.01.03
+  summary: "from transportation research part B. a good paper modeling traffic signal in macroscopic traffic sim.
+    core ideas: develop a solver to solve for through vehicle quantity while not losing or simply aggregating the signal structure. ideas:
+    hold-free: only physical constraints (link or phase capacity) can stop a vehicle from moving; 
+    hold-free + stage level free: correctly identify which movement can use which downstream space in different phases, and that's why 
+    the phase structure must be retained;
+    conservation of turning fractions: a blocked movement can block others using the same lane; (implicit FIFO)
+    per-phase downstream discharge competition: only the movements using the same downstream demand in the same phase compete and distribute the capacity,
+    preserving fidelity of the impacts of phase orders;
+    stable solution for the intersection: simulate on the single intersection with init condition until the solution is stable
+    a core assumption resulting in limitation: assumes the signal phase plan is constant within a delta_t"
 
 differentiable traffic simulation:
 - title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
