@@ -293,8 +293,17 @@ survey:
     the key idea is to model the temporal sensitivity, or generally, sensitivity across a dynamic boundary that can be dependent on the parameter, given that in the 
     locality this event will happen; as a contrary, probablistic mass modeling models another aspect: the chance of the event to happen."
 
+next batch candidates:
+- "DTALite: A queue-based mesoscopic traffic simulator for fast model evaluation and calibration"
+- "A generic class of first order node models for dynamic macroscopic simulation of traffic flows"
+- "A link queue model of network traffic flow"
+- "Dynamic network loading: A stochastic differentiable model that derives link state distributions"
+- "Dynamic traffic modelling and dynamic stochastic user equilibrium assignment for general road networks"
+- "Second order macroscopic traffic flow model validation using automatic differentiation with resilient backpropagation and particle swarm optimisation algorithms"
+- "Discrete adjoint gradient computation for multiclass traffic flow models on road networks"
+- "Integrated self-consistent macro-micro traffic flow modeling and calibration framework based on trajectory data"
 
-unread_candidates:
+stashed candidates:
 - "Differentiable Discrete Event Simulation for Queuing Network Control"
 - "Generalizing Stochastic Smoothing for Differentiation and Gradient Estimation"
 - "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
