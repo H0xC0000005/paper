@@ -84,12 +84,13 @@ microscopic traffic simulation:
       probably because too adhering to the traffic rule?)"
 
 
-meso traffic simulation:
+meso traffic simulation and multi-resolution/hybrid:
 - title: "Traffic Simulation Performance Optimization through Multi-Resolution Modeling of Road Segments"
   date: 2015.06.10
   summary: "elementary techniques about meso traffic simulation; handle micro-macro and macro-micro transition specifically, 
     and introduced basic techniques such as ghost vehicle and macro-micro vehicle stacking (like the vertical stacking
     method used in some TSC)"
+  note: "this may not be meso; it is more like multi-resolution or hybrid"
 - title: "Bridging the Gap Between Mesoscopic Transport Planning and Microscopic Traffic Simulation: An Analytical and Numerical Analysis of Traffic Dynamics"
   date: 2022.10.28
   summary: "a comparison work, mainly compare MATsim amd SUMO for consistency between meso and micro behavior. the paper lists quite a couple of flow, speed, and congestion
@@ -114,6 +115,14 @@ meso traffic simulation:
     2, CTM and LTM are sometimes mixed, and since CTM assumes homogeneous traffic while LTM does not, it can result in unrealistic traffic dynamics
     the paper adopts a discrite version of LIFT(a meso version of LTM in 2026) and asserts in the experiment that 
     discrete version of LIFT can produce similar enough simulation results compared to micro"
+- title: "A mesoscopic link-transmission-model able to track individual vehicles"
+  date: 2025.02.02
+  summary: "From journal: Simulation Modelling Practice and Theory. 
+    proposes a discretized LTM: use individual counts instead of continual flow; the residual of continual flow is accumulated, 
+    and FIFO queue is maintained to track individual identity; individuals are discharged based on accumulated flow (for 1 unit);
+    it provides a proof that this method has at most one vehicle error compared to the continual LTM;
+    it also has queue blocking behavior since FIFO is assumed; but it can be too strong as this is equivalent to one-lane for all movements;
+    it also does only discretization so the discrete vehicles are generated with jagging from continual flow residual"
 
 macroscopic traffic simulation:
 - title: "Extended macroscopic node model for multilane traffic"
@@ -140,6 +149,19 @@ macroscopic traffic simulation:
     preserving fidelity of the impacts of phase orders;
     stable solution for the intersection: simulate on the single intersection with init condition until the solution is stable
     a core assumption resulting in limitation: assumes the signal phase plan is constant within a delta_t"
+- title: "The Link Transmission Model for Dynamic Network Loading"
+  date: 2007.?.?
+  summary: "the phd thesis that derives LTM from LWR conditions and kinetic wave theory.
+    core ideas: don't need to model the link spatially like CTM; the wave propagates linearly so it can be solved analytically 
+    from end to end; the forwarding time of a traffic delta can be computed by (assuming triangular) FD on the link; 
+    use cumulative vehicle count as the state variable of a link
+    how much traffic is transmitted is used by an inverse cumulative function
+    merging and diverging are discussed and handled by min (diverge downstrem traffic) and max (merging, based on supply priority)
+    the intersection should give the amortized waiting time of vehicles on the intersection. traffic also form queues per inbound link 
+    and this work performs a strict FIFO blockage if any of the movement is not allowed.
+    furthermore, the work generalizes LTM to multi-commodity, or multi-routes. traffic is generated and movement traced according to the routes,
+    and thus determining node movements and it is the source of FIFO
+    basic backbone update rule: link physics -> node physics -> state update."
 
 differentiable traffic simulation:
 - title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
