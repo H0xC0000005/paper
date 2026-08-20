@@ -162,6 +162,27 @@ macroscopic traffic simulation:
     furthermore, the work generalizes LTM to multi-commodity, or multi-routes. traffic is generated and movement traced according to the routes,
     and thus determining node movements and it is the source of FIFO
     basic backbone update rule: link physics -> node physics -> state update."
+- title: "A generic class of first order node models for dynamic macroscopic simulation of traffic flows"
+  date: 2011.?.?
+  summary: "from transportation research part B. propose a very first node macro node model that satisfies a bucket of constraints 
+    that are essential in modeling correct traffic behavior. 
+    the work first asserts that previous (very old) works either violate traffic constraints or generate unrealistic behavior at node
+    then propose 7 constraints that a macro node model must satisfy: independent of inbound/outbound link numbers, maximizing flows, non-neg, 
+    conservation of vehicles, satisfy D&S, conservation of turning fractions (CTF), satisfication of invariance principle (hold-free)
+    and generalize the model to signalized intersections.
+    CTF is especially interesting because it introduces implicit FIFO, and hold-free (at least one constraint should be reached 
+    for the converged solution)"
+- title: "On the continuum approximation of the on-and-off signal control on dynamic traffic networks"
+  date: 2014.?.?
+  summary: "from transportation research part B. 
+    The paper is not the first inventor of the continuous signal model, but it proposes the gap that nobody had studied whether 
+    this model provides the fidelity as the on-off signal model. It uses theoretical proof to establish a few conclusions: 
+    the continuous model has a strict analytical error bound regardless of FD, and scales with cycle length; 
+    upon heavy spillback (over few cycles), the guaranteed bound is gone, and the error bound increases with time but with concave FD the error is better; 
+    with transient spillback, the bound does not hold and the error can be large + go with time. 
+    important lesson: intra-cycle dependencies are not behavior that can be safely averaged at cycle level. explicit modeling needed 
+    in macrosim. meso can solve this right ahead because the queue FIFO is constructed with agent level granularity.
+    "
 
 differentiable traffic simulation:
 - title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
