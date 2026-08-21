@@ -183,6 +183,15 @@ macroscopic traffic simulation:
     important lesson: intra-cycle dependencies are not behavior that can be safely averaged at cycle level. explicit modeling needed 
     in macrosim. meso can solve this right ahead because the queue FIFO is constructed with agent level granularity.
     "
+- title: "Differentiable Packet-Based Mesoscopic DNL for Fixed-Time Signal Optimization"
+  date: 2017.09.02
+  summary: "partial FIFO paper. two core contributions: extend existing macro work to arbitrary input priority; and propose partial FIFO at link level
+    core idea: a movement may only obstruct another movement partially if affected by downstream spillback, so use eta to model the blockage proportion; 
+    eta=1 is full FIFO; this ratio can be asymmetric between two movements and intuitive: consider off ramp and 4-lane freeway
+    discuss three cases mainly in paper: MISO, SIMO, MIMO; MISO: distribute demand according to inbound link priority proportionally
+    SIMO: distribute the demand in priority ranked order, and also resolve spillback and partial FIFO in this order
+    MIMO: the joint case of MISO and SIMO. the derivation is from equating the both cases by the same node flow in two cases (node conservation)
+    also assumes isotropic traffic for the movement "
 
 differentiable traffic simulation:
 - title: "Ultra-fast Traffic Nowcasting and Control via Differentiable Agent-based Simulation"
